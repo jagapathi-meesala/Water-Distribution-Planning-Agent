@@ -1,0 +1,32 @@
+name: plan-water-distribution
+description: Structure a candidate water distribution plan from supplied zones, supply, and constraints.
+input_schema:
+  type: object
+  properties:
+    zones:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
+    available_supply: {}
+    constraints:
+      type: array
+      items:
+        type: string
+  required:
+    - zones
+    - available_supply
+output_schema:
+  type: object
+  properties:
+    zones_received:
+      type: array
+    available_supply: {}
+    constraints:
+      type: array
+    incomplete_zones:
+      type: array
+    validation_required:
+      type: array
+    note:
+      type: string

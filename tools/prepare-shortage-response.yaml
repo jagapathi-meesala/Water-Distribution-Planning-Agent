@@ -1,0 +1,27 @@
+name: prepare-shortage-response
+description: Organize shortage-response options using caller-provided priorities and constraints.
+input_schema:
+  type: object
+  properties:
+    shortage:
+      type: object
+      additionalProperties: true
+    options:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
+  required:
+    - shortage
+    - options
+output_schema:
+  type: object
+  properties:
+    shortage_summary:
+      type: string
+    response_options:
+      type: array
+    missing_information:
+      type: array
+    review_note:
+      type: string

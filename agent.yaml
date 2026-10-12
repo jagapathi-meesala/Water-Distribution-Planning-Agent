@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: water-distribution-planning-agent
+version: 1.0.0
+description: A framework-independent agent for organizing water demand, supply, storage, and distribution planning using caller-provided data.
+author: Agent Passport Project
+license: MIT
+skills:
+  - demand-assessment
+  - distribution-planning
+  - shortage-response
+tools:
+  - assess-water-demand
+  - plan-water-distribution
+  - prepare-shortage-response
+runtime:
+  max_turns: 20
+  timeout: 120
+tags:
+  - water
+  - distribution
+  - planning
+  - resource-allocation

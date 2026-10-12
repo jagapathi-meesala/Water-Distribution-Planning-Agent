@@ -1,0 +1,30 @@
+name: assess-water-demand
+description: Organize caller-provided water demand records and available supply.
+input_schema:
+  type: object
+  properties:
+    demand_records:
+      type: array
+      items:
+        type: object
+        additionalProperties: true
+    available_supply:
+      description: Supply quantity with caller-defined units.
+    period:
+      type: string
+  required:
+    - demand_records
+output_schema:
+  type: object
+  properties:
+    record_count:
+      type: integer
+    demand_records:
+      type: array
+    available_supply: {}
+    period:
+      type: string
+    missing_information:
+      type: array
+    note:
+      type: string
